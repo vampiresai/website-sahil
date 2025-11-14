@@ -64,13 +64,285 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 50%, var(--bg-gradient-end) 100%);
+    background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
     scroll-behavior: smooth;
     transition: background 0.3s ease, color 0.3s ease;
+    position: relative;
+    min-height: 100vh;
 }
+
+/* Animated Background Container */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Background Grid */
+.animated-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(242, 242, 242, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(242, 242, 242, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+    opacity: 0.5;
+}
+
+[data-theme="light"] .animated-background::before {
+    background-image: 
+        linear-gradient(rgba(13, 13, 13, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(13, 13, 13, 0.02) 1px, transparent 1px);
+}
+
+@keyframes gridMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+/* Gradient Mesh */
+.animated-background::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(242, 242, 242, 0.08) 0%, transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(242, 242, 242, 0.06) 0%, transparent 25%),
+        radial-gradient(circle at 50% 50%, rgba(242, 242, 242, 0.04) 0%, transparent 30%),
+        radial-gradient(circle at 10% 80%, rgba(242, 242, 242, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 20%, rgba(242, 242, 242, 0.07) 0%, transparent 25%);
+    animation: meshMove 30s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+[data-theme="light"] .animated-background::after {
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(13, 13, 13, 0.03) 0%, transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(13, 13, 13, 0.02) 0%, transparent 25%),
+        radial-gradient(circle at 50% 50%, rgba(13, 13, 13, 0.015) 0%, transparent 30%),
+        radial-gradient(circle at 10% 80%, rgba(13, 13, 13, 0.025) 0%, transparent 20%),
+        radial-gradient(circle at 90% 20%, rgba(13, 13, 13, 0.035) 0%, transparent 25%);
+}
+
+@keyframes meshMove {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(5%, 5%) rotate(5deg);
+    }
+    50% {
+        transform: translate(-3%, 8%) rotate(-3deg);
+    }
+    75% {
+        transform: translate(8%, -3%) rotate(3deg);
+    }
+}
+
+/* Waves */
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(242, 242, 242, 0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: waveAnimation 20s ease-in-out infinite;
+}
+
+.wave-1 {
+    top: -50%;
+    left: -50%;
+    animation-delay: 0s;
+    animation-duration: 20s;
+}
+
+.wave-2 {
+    top: -30%;
+    left: -30%;
+    animation-delay: -5s;
+    animation-duration: 25s;
+}
+
+.wave-3 {
+    top: -70%;
+    left: -20%;
+    animation-delay: -10s;
+    animation-duration: 30s;
+}
+
+[data-theme="light"] .wave {
+    background: radial-gradient(ellipse at center, rgba(13, 13, 13, 0.015) 0%, transparent 70%);
+}
+
+@keyframes waveAnimation {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+    }
+    33% {
+        transform: translate(10%, 10%) scale(1.2);
+        opacity: 0.6;
+    }
+    66% {
+        transform: translate(-5%, 15%) scale(0.9);
+        opacity: 0.5;
+    }
+}
+
+/* Orbs */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    animation: orbFloat 15s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(242, 242, 242, 0.1) 0%, rgba(242, 242, 242, 0.05) 50%, transparent 100%);
+    top: 10%;
+    left: 10%;
+    animation-duration: 20s;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(242, 242, 242, 0.08) 0%, rgba(242, 242, 242, 0.04) 50%, transparent 100%);
+    top: 60%;
+    right: 10%;
+    animation-duration: 25s;
+    animation-delay: -5s;
+}
+
+.orb-3 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(242, 242, 242, 0.09) 0%, rgba(242, 242, 242, 0.045) 50%, transparent 100%);
+    bottom: 20%;
+    left: 50%;
+    animation-duration: 18s;
+    animation-delay: -10s;
+}
+
+.orb-4 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(242, 242, 242, 0.07) 0%, rgba(242, 242, 242, 0.035) 50%, transparent 100%);
+    top: 40%;
+    left: 70%;
+    animation-duration: 22s;
+    animation-delay: -7s;
+}
+
+[data-theme="light"] .orb {
+    background: radial-gradient(circle, rgba(13, 13, 13, 0.04) 0%, rgba(13, 13, 13, 0.02) 50%, transparent 100%);
+}
+
+@keyframes orbFloat {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.6;
+    }
+    25% {
+        transform: translate(30px, -40px) scale(1.1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-20px, 30px) scale(0.9);
+        opacity: 0.7;
+    }
+    75% {
+        transform: translate(40px, 20px) scale(1.05);
+        opacity: 0.75;
+    }
+}
+
+/* Particles */
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(242, 242, 242, 0.4);
+    border-radius: 50%;
+    animation: particleMove 20s linear infinite;
+}
+
+[data-theme="light"] .particle {
+    background: rgba(13, 13, 13, 0.2);
+}
+
+.particle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; animation-duration: 15s; }
+.particle:nth-child(2) { top: 40%; left: 30%; animation-delay: -2s; animation-duration: 18s; }
+.particle:nth-child(3) { top: 60%; left: 50%; animation-delay: -4s; animation-duration: 20s; }
+.particle:nth-child(4) { top: 80%; left: 70%; animation-delay: -6s; animation-duration: 22s; }
+.particle:nth-child(5) { top: 30%; left: 80%; animation-delay: -8s; animation-duration: 16s; }
+.particle:nth-child(6) { top: 50%; left: 20%; animation-delay: -10s; animation-duration: 19s; }
+.particle:nth-child(7) { top: 70%; left: 60%; animation-delay: -12s; animation-duration: 21s; }
+.particle:nth-child(8) { top: 10%; left: 40%; animation-delay: -14s; animation-duration: 17s; }
+.particle:nth-child(9) { top: 90%; left: 90%; animation-delay: -16s; animation-duration: 23s; }
+.particle:nth-child(10) { top: 15%; left: 60%; animation-delay: -18s; animation-duration: 24s; }
+.particle:nth-child(11) { top: 35%; left: 15%; animation-delay: -20s; animation-duration: 16s; }
+.particle:nth-child(12) { top: 55%; left: 85%; animation-delay: -22s; animation-duration: 18s; }
+.particle:nth-child(13) { top: 75%; left: 25%; animation-delay: -24s; animation-duration: 20s; }
+.particle:nth-child(14) { top: 25%; left: 55%; animation-delay: -26s; animation-duration: 22s; }
+.particle:nth-child(15) { top: 45%; left: 75%; animation-delay: -28s; animation-duration: 19s; }
+
+@keyframes particleMove {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(var(--move-x, 100px) * 1), calc(var(--move-y, -100px) * 1));
+        opacity: 0;
+    }
+}
+
+/* Set random movement for particles */
+.particle:nth-child(1) { --move-x: 150px; --move-y: -120px; }
+.particle:nth-child(2) { --move-x: -100px; --move-y: 150px; }
+.particle:nth-child(3) { --move-x: 120px; --move-y: 100px; }
+.particle:nth-child(4) { --move-x: -150px; --move-y: -80px; }
+.particle:nth-child(5) { --move-x: 80px; --move-y: -150px; }
+.particle:nth-child(6) { --move-x: -120px; --move-y: 120px; }
+.particle:nth-child(7) { --move-x: 100px; --move-y: 140px; }
+.particle:nth-child(8) { --move-x: -80px; --move-y: -100px; }
+.particle:nth-child(9) { --move-x: 140px; --move-y: -110px; }
+.particle:nth-child(10) { --move-x: -130px; --move-y: 90px; }
+.particle:nth-child(11) { --move-x: 110px; --move-y: -130px; }
+.particle:nth-child(12) { --move-x: -90px; --move-y: 140px; }
+.particle:nth-child(13) { --move-x: 130px; --move-y: 110px; }
+.particle:nth-child(14) { --move-x: -110px; --move-y: -120px; }
+.particle:nth-child(15) { --move-x: 90px; --move-y: 130px; }
 
 /* Loading Screen */
 .loading-screen {
@@ -1217,7 +1489,7 @@ body.menu-open {
     }
     
     .technologies-showcase {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -1377,16 +1649,6 @@ body.menu-open {
         gap: 1.5rem;
     }
     
-    .contact-content-wrapper {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .contact-info-section {
-        min-width: 100%;
-        width: 100%;
-    }
-    
     .contact-card {
         padding: 2rem 1.5rem;
     }
@@ -1403,6 +1665,13 @@ body.menu-open {
     
     .category-title {
         font-size: 1.5rem;
+    }
+}
+
+/* Ensure 3 columns on tablets and larger screens for Technologies */
+@media (min-width: 768px) {
+    .technologies-showcase {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -1787,7 +2056,7 @@ body.menu-open {
 /* Technologies Showcase Section */
 .technologies-showcase {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -2353,7 +2622,661 @@ body.menu-open {
     height: 0;
 }
 
+/* ============================================
+   ENHANCED RESPONSIVE DESIGN IMPROVEMENTS
+   ============================================ */
 
+/* Base Mobile-First Improvements */
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    -webkit-touch-callout: none;
+}
 
+/* Ensure all images are responsive */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
 
+/* Better container responsiveness - only override padding, not existing max-width */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Enhanced Typography Scaling */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 769px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Enhanced Grid Responsiveness - Additional breakpoint for better tablet support */
+@media (min-width: 600px) and (max-width: 767px) {
+    .education-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .achievements-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .statistics-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .technologies-showcase {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Enhanced Mobile Navigation */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .mobile-menu-toggle {
+        width: 40px;
+        height: 40px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    .nav-menu {
+        top: 60px;
+        height: calc(100vh - 60px);
+        padding-top: 1rem;
+    }
+    
+    .nav-menu a {
+        min-height: 50px;
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .theme-toggle-container {
+        margin-left: auto;
+        margin-right: 0.5rem;
+    }
+}
+
+/* Enhanced Hero Section for Mobile */
+@media (max-width: 480px) {
+    .hero {
+        padding: 5rem 1rem 2rem;
+        min-height: 85vh;
+    }
+    
+    .hero-name {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-contact {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .contact-link {
+        width: 100%;
+        padding: 0.9rem 1rem;
+        font-size: 0.85rem;
+        min-height: 44px;
+    }
+    
+    .scroll-indicator {
+        bottom: 1rem;
+    }
+    
+    .mouse {
+        width: 25px;
+        height: 40px;
+    }
+}
+
+/* Enhanced Section Spacing */
+@media (max-width: 480px) {
+    .section {
+        padding: 3rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+    }
+    
+    .section-title::after {
+        width: 60px;
+    }
+}
+
+/* Enhanced Card Responsiveness */
+@media (max-width: 480px) {
+    .glass-card {
+        padding: 1.25rem;
+        border-radius: 15px;
+    }
+    
+    .about-card,
+    .education-card,
+    .achievement-item,
+    .project-card,
+    .stat-card,
+    .tech-category-card,
+    .contact-card {
+        padding: 1.25rem;
+    }
+}
+
+/* Enhanced About Section */
+@media (max-width: 768px) {
+    .about-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .about-image-container {
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .about-text {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .about-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* Enhanced Skills Section */
+@media (max-width: 768px) {
+    .skills-grid {
+        gap: 0.75rem;
+        justify-content: center;
+    }
+    
+    .skill-tag {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+        min-height: 44px;
+        min-width: 80px;
+    }
+    
+    .category-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-tag {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .category-title {
+        font-size: 1.2rem;
+        padding-left: 0.75rem;
+    }
+}
+
+/* Enhanced Projects Section */
+@media (max-width: 480px) {
+    .project-image-container {
+        height: 120px;
+    }
+    
+    .project-content {
+        padding: 1.25rem;
+    }
+    
+    .project-icon {
+        font-size: 2.5rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-content p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Enhanced Statistics Section */
+@media (max-width: 480px) {
+    .stat-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .stat-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.95rem;
+    }
+}
+
+/* Enhanced Technologies Section */
+@media (max-width: 480px) {
+    .tech-category-card {
+        padding: 1.5rem;
+    }
+    
+    .tech-category-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .tech-category-header i {
+        font-size: 1.75rem;
+    }
+    
+    .tech-category-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .tech-stack {
+        justify-content: center;
+        gap: 0.6rem;
+    }
+    
+    .tech-item {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        min-height: 36px;
+    }
+}
+
+/* Enhanced Contact Section */
+@media (max-width: 768px) {
+    .contact-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .contact-info-section {
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    .contact-info-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .contact-info-item i {
+        margin-top: 0;
+    }
+    
+    .letter-image {
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card {
+        padding: 1.5rem;
+    }
+    
+    .contact-info-item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.25rem;
+    }
+    
+    .contact-info-item h3 {
+        font-size: 1rem;
+    }
+    
+    .contact-info-item p {
+        font-size: 0.9rem;
+    }
+    
+    .letter-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Enhanced Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+    
+    .footer-links li {
+        margin-bottom: 0.6rem;
+    }
+}
+
+/* Enhanced Modal Responsiveness */
+@media (max-width: 768px) {
+    .skill-modal-content {
+        width: 90%;
+        padding: 2rem 1.5rem;
+        margin: 10% auto;
+    }
+    
+    .skill-modal-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .skill-modal-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-modal-content {
+        width: 95%;
+        padding: 1.5rem 1rem;
+        margin: 15% auto;
+        border-radius: 15px;
+    }
+    
+    .skill-modal-close {
+        font-size: 1.75rem;
+        top: 0.75rem;
+        right: 1rem;
+    }
+    
+    .skill-modal-content h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .skill-modal-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+/* Enhanced Back to Top Button */
+@media (max-width: 480px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1rem;
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* Enhanced Video Responsiveness */
+@media (max-width: 768px) {
+    .hero-video-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .hero-video {
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+/* Enhanced Touch Targets */
+@media (max-width: 768px) {
+    button,
+    .contact-link,
+    .skill-tag,
+    .tech-item,
+    .back-to-top,
+    .mobile-menu-toggle {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    a {
+        -webkit-tap-highlight-color: rgba(242, 242, 242, 0.1);
+    }
+}
+
+/* Enhanced Loading Screen for Mobile */
+@media (max-width: 480px) {
+    .pyramid-loader {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Landscape Orientation Support */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 4rem 1.5rem 2rem;
+    }
+    
+    .hero-name {
+        font-size: 2.5rem;
+    }
+    
+    .nav-menu {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .section {
+        padding: 3rem 1.5rem;
+    }
+}
+
+/* Large Screens Optimization */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .section {
+        padding: 7rem 2rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .mobile-menu-toggle,
+    .back-to-top,
+    .scroll-indicator,
+    .theme-toggle-container {
+        display: none !important;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High DPI Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-video,
+    .project-image,
+    .about-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Safe Area Support for Notched Devices */
+@supports (padding: max(0px)) {
+    .navbar,
+    .section {
+        padding-left: max(1rem, env(safe-area-inset-left));
+        padding-right: max(1rem, env(safe-area-inset-right));
+    }
+    
+    .footer {
+        padding-bottom: max(2rem, env(safe-area-inset-bottom));
+    }
+}
+
+/* Animated Background Responsive Optimizations */
+@media (max-width: 768px) {
+    .animated-background::before {
+        background-size: 30px 30px;
+    }
+    
+    .orb {
+        filter: blur(30px);
+    }
+    
+    .orb-1, .orb-2, .orb-3, .orb-4 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .wave {
+        width: 150%;
+        height: 150%;
+    }
+    
+    .particle {
+        width: 3px;
+        height: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .animated-background::before {
+        background-size: 25px 25px;
+        opacity: 0.3;
+    }
+    
+    .orb {
+        filter: blur(25px);
+    }
+    
+    .orb-1, .orb-2, .orb-3, .orb-4 {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .particle {
+        width: 2px;
+        height: 2px;
+        opacity: 0.6;
+    }
+}
+
+/* Performance optimization - reduce animations on low-end devices */
+@media (prefers-reduced-motion: no-preference) {
+    @media (max-width: 768px) {
+        .animated-background::before {
+            animation-duration: 30s;
+        }
+        
+        .orb {
+            animation-duration: 25s;
+        }
+        
+        .wave {
+            animation-duration: 30s;
+        }
+        
+        .particle {
+            animation-duration: 25s;
+        }
+    }
+}
 
