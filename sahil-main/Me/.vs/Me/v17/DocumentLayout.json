@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\sahil-main\\Me\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8DC1FB3F-802C-42A6-9448-E863097E3833}|Me.csproj|c:\\users\\user\\source\\repos\\sahil-main\\me\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DC1FB3F-802C-42A6-9448-E863097E3833}|Me.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DC1FB3F-802C-42A6-9448-E863097E3833}|Me.csproj|c:\\users\\user\\source\\repos\\sahil-main\\me\\wwwroot\\css\\portfolio.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8DC1FB3F-802C-42A6-9448-E863097E3833}|Me.csproj|solutionrelative:wwwroot\\css\\portfolio.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "portfolio.css",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\sahil-main\\Me\\wwwroot\\css\\portfolio.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\portfolio.css",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\sahil-main\\Me\\wwwroot\\css\\portfolio.css",
+              "RelativeToolTip": "wwwroot\\css\\portfolio.css",
+              "ViewState": "AQIAABYHAAAAAAAAAAAYwOEHAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-10T03:16:59.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\sahil-main\\Me\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\sahil-main\\Me\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAJgBAAAAAAAAAAAAAKQBAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T02:22:10.18Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
