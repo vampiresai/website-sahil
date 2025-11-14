@@ -1,525 +1,473 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sahil Ramesar - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="css/portfolio.css" />
-</head>
-<body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="pyramid-loader">
-            <div class="wrapper">
-                <span class="side side1"></span>
-                <span class="side side2"></span>
-                <span class="side side3"></span>
-                <span class="side side4"></span>
-                <span class="shadow"></span>
-            </div>  
-        </div>
-    </div>
+@{
+    ViewData["Title"] = "Sahil Ramesar - Portfolio";
+}
 
-    <!-- Animated Background Effects -->
-    <div class="animated-background">
-        <div class="bg-gradient-mesh"></div>
-        <div class="bg-particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
-        <div class="bg-grid"></div>
-        <div class="bg-waves">
-            <div class="wave wave1"></div>
-            <div class="wave wave2"></div>
-            <div class="wave wave3"></div>
-        </div>
-        <div class="bg-orbs">
-            <div class="orb orb1"></div>
-            <div class="orb orb2"></div>
-            <div class="orb orb3"></div>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <div id="main-content" class="main-content">
-        <!-- Navigation -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <ul class="nav-menu">
-                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-                    <li><a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
-                    <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-                    <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
-                    <li><a href="#technologies"><i class="fas fa-tools"></i> Technologies</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-                <div class="theme-toggle-container">
-                    <label class="ui-switch">
-                        <input type="checkbox" id="themeToggle">
-                        <div class="slider">
-                            <div class="circle"></div>
-                        </div>
-                    </label>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="hero-video-container">
-                <video class="hero-video" autoplay muted loop playsinline>
-                    <source src="images/Black White Abstract Color and Style Video Background.mp4" type="video/mp4">
-                </video>
-                <div class="hero-video-overlay"></div>
-            </div>
-            <div class="hero-content">
-                <h1 class="hero-name">Sahil Ramesar</h1>
-                <p class="hero-title">Application Developer | Full-Stack & Cloud Computing | Interactive & Immersive Systems</p>
-                <div class="hero-contact">
-                    <a href="Documents/sahil ramesar cv (2).pdf" download="Sahil_Ramesar_CV.pdf" class="contact-link download-cv">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse"></div>
-            </div>
-        </section>
-
-        <!-- About Me Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="glass-card about-card">
-                    <div class="about-content-wrapper">
-                        <div class="about-image-container">
-                            <img src="images/saii.jpg" alt="Sahil Ramesar" class="about-image">
-                        </div>
-                        <div class="about-text-container">
-                            <p class="about-text">
-                                I'm a results-driven software developer with a strong foundation in programming, cloud technologies, databases, and UI/UX design. I bring hands-on experience in building scalable applications, analyzing complex systems, and delivering creative, practical solutions through modern development frameworks. I thrive in collaborative environments, adapt quickly to new challenges, and continuously seek to refine my technical and problem-solving skills.I'm a fast learner, team player, and always eager to grow in the tech industry.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="education-grid">
-                    <div class="glass-card education-card">
-                        <div class="education-header">
-                            <h3>Bachelor of Computer and Information Sciences</h3>
-                            <span class="education-type">Application Development</span>
-                        </div>
-                        <p class="education-institution">Varsity College</p>
-                        <p class="education-period">2023 - 2025</p>
-                    </div>
-                    <div class="glass-card education-card">
-                        <div class="education-header">
-                            <h3>Matric</h3>
-                            <span class="education-type">Bachelors Degree</span>
-                        </div>
-                        <p class="education-institution">Curro Midrand Sagewood</p>
-                        <p class="education-period">2019 - 2022</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Achievements Section -->
-        <section id="achievements" class="section">
-            <div class="container">
-                <h2 class="section-title">Achievements & Highlights</h2>
-                <div class="achievements-grid">
-                    <div class="glass-card achievement-item">
-                        <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
-                        <p>Gained consistent and several distinctions in my modules</p>
-                    </div>
-                    <div class="glass-card achievement-item">
-                        <div class="achievement-icon"><i class="fas fa-briefcase"></i></div>
-                        <p>Built multiple full-stack applications integrating frontend, backend, and databases</p>
-                    </div>
-                    <div class="glass-card achievement-item">
-                        <div class="achievement-icon"><i class="fas fa-file-alt"></i></div>
-                        <p>Created research proposals and academic reports on ICT topics</p>
-                    </div>
-                    <div class="glass-card achievement-item">
-                        <div class="achievement-icon"><i class="fas fa-users"></i></div>
-                        <p>Participated in group software development projects using Agile practices</p>
-                    </div>
-                    <div class="glass-card achievement-item">
-                        <div class="achievement-icon"><i class="fas fa-globe"></i></div>
-                        <p>Worked to develop fully functional web applications for companies as well as mobile apps</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title">Skills & Expertise</h2>
-
-                <div class="skills-category">
-                    <h3 class="category-title">Programming</h3>
-                    <div class="skills-grid">
-                        <div class="glass-card skill-tag" data-skill="Java" data-description="I've used Java extensively in my academic projects, particularly for building object-oriented applications. I've developed desktop applications using Java Swing and worked with Java frameworks for backend development. My experience includes creating robust, scalable solutions following best practices and design patterns.">Java</div>
-                        <div class="glass-card skill-tag" data-skill="HTML" data-description="HTML is fundamental to all my web development projects. I've used it to structure content for various web applications, ensuring semantic markup and accessibility. I've built responsive layouts that work across different devices and browsers, integrating HTML with CSS and JavaScript for dynamic user experiences.">HTML</div>
-                        <div class="glass-card skill-tag" data-skill="C#" data-description="I've utilized C# for developing Windows applications and backend services. My experience includes working with .NET framework to create desktop applications and web services. I've implemented object-oriented principles, worked with LINQ, and integrated C# applications with databases for data management.">C#</div>
-                        <div class="glass-card skill-tag" data-skill="JavaScript" data-description="JavaScript is central to my frontend development work. I've used it to create interactive web applications, handle API calls, and implement dynamic content updates. My projects include form validation, DOM manipulation, event handling, and building single-page applications with modern JavaScript features.">JavaScript</div>
-                        <div class="glass-card skill-tag" data-skill="React" data-description="I've built modern, responsive web applications using React. My experience includes creating reusable components, managing state with hooks, implementing routing, and integrating with REST APIs. I've developed user interfaces that are both functional and visually appealing, following React best practices.">React</div>
-                        <div class="glass-card skill-tag" data-skill="Kotlin" data-description="I've used Kotlin for Android mobile app development. My experience includes building native Android applications with Kotlin, utilizing Android SDK features, implementing MVVM architecture, and creating user-friendly mobile interfaces. I've worked on apps that handle data persistence and API integration.">Kotlin</div>
-                        <div class="glass-card skill-tag" data-skill="CSS" data-description="CSS is essential to my frontend development toolkit. I've created responsive designs using Flexbox and Grid, implemented animations and transitions, and built modern UIs with glassmorphism effects. I've worked with CSS preprocessors and maintained consistent styling across large projects.">CSS</div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3 class="category-title">Cloud Technologies</h3>
-                    <div class="skills-grid">
-                        <div class="glass-card skill-tag" data-skill="Firebase" data-description="I've integrated Firebase into multiple mobile and web applications for authentication, real-time database, and cloud storage. I've used Firebase Authentication for user management, Firestore for data storage, and Firebase Cloud Functions for serverless backend operations. This has enabled me to build scalable applications quickly.">Firebase</div>
-                        <div class="glass-card skill-tag" data-skill="Azure" data-description="I've worked with Microsoft Azure for cloud services deployment and management. My experience includes deploying web applications to Azure App Service, configuring Azure SQL databases, and utilizing Azure's cloud storage solutions. I've also worked with Azure DevOps for CI/CD pipelines.">Azure</div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3 class="category-title">Databases</h3>
-                    <div class="skills-grid">
-                        <div class="glass-card skill-tag" data-skill="MySQL" data-description="I've used MySQL extensively for relational database management in web applications. I've designed database schemas, written complex SQL queries, implemented joins, and optimized database performance. My projects include e-commerce systems and content management applications with proper normalization and indexing.">MySQL</div>
-                        <div class="glass-card skill-tag" data-skill="SQL Server" data-description="I've worked with SQL Server for enterprise-level database solutions. My experience includes creating stored procedures, triggers, and views. I've integrated SQL Server with .NET applications and managed database security, backups, and performance tuning for production environments.">SQL Server</div>
-                        <div class="glass-card skill-tag" data-skill="MongoDB" data-description="I've utilized MongoDB for NoSQL database solutions in projects requiring flexible data structures. I've worked with MongoDB collections, implemented aggregation pipelines, and integrated it with Node.js applications. My experience includes schema design for document-based storage and query optimization.">MongoDB</div>
-                        <div class="glass-card skill-tag" data-skill="MySQL Workbench" data-description="I've used MySQL Workbench for database design, modeling, and administration. I've created ER diagrams, designed database schemas visually, and managed database connections. This tool has been essential for planning and documenting database structures before implementation.">MySQL Workbench</div>
-                        <div class="glass-card skill-tag" data-skill="RoomDB" data-description="I've implemented RoomDB in Android applications for local data persistence. I've created entities, DAOs (Data Access Objects), and database classes following Room architecture. My experience includes implementing offline-first features, data migrations, and efficient local data storage for mobile apps.">RoomDB</div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3 class="category-title">Tools</h3>
-                    <div class="skills-grid">
-                        <div class="glass-card skill-tag" data-skill="GitHub & Git" data-description="Git and GitHub are essential to my development workflow. I use Git for version control on all projects, managing branches, commits, and merges. I've collaborated on team projects using GitHub, created pull requests, resolved merge conflicts, and maintained clean commit histories following best practices.">GitHub & Git</div>
-                        <div class="glass-card skill-tag" data-skill="Postman" data-description="I use Postman extensively for API testing and development. I've created collections of API requests, tested REST endpoints, debugged API responses, and documented APIs. Postman has been crucial for integrating frontend applications with backend services and ensuring API reliability.">Postman</div>
-                        <div class="glass-card skill-tag" data-skill="Visual Studio/Code" data-description="Visual Studio Code is my primary code editor for web development. I've customized it with extensions for productivity, used integrated terminal for command-line operations, and leveraged its debugging capabilities. I've also used Visual Studio for .NET development with C#.">Visual Studio/Code</div>
-                        <div class="glass-card skill-tag" data-skill="Android Studio" data-description="I've used Android Studio for developing native Android applications. My experience includes using the layout editor, debugging with the built-in debugger, managing Gradle dependencies, and testing apps on emulators and physical devices. I've also utilized Android Studio's profiling tools for performance optimization.">Android Studio</div>
-                        <div class="glass-card skill-tag" data-skill="NetBeans" data-description="I've used NetBeans for Java development, particularly for desktop applications. I've utilized its GUI builder, integrated debugging tools, and managed Java projects with Maven. NetBeans has been helpful for rapid prototyping and building Java Swing applications.">NetBeans</div>
-                        <div class="glass-card skill-tag" data-skill="PyCharm" data-description="I've used PyCharm for Python development, including game development projects. I've leveraged its intelligent code completion, debugging features, and integrated terminal. PyCharm has been essential for managing Python projects, handling virtual environments, and developing applications like my Mario game.">PyCharm</div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3 class="category-title">Software Engineering</h3>
-                    <div class="skills-grid">
-                        <div class="glass-card skill-tag" data-skill="Agile" data-description="I've participated in Agile development methodologies in group projects, including sprint planning, daily standups, and sprint reviews. I've worked with Scrum frameworks, managed user stories, and adapted to changing requirements. Agile practices have helped me deliver iterative, high-quality software solutions.">Agile</div>
-                        <div class="glass-card skill-tag" data-skill="SDLC" data-description="I understand and have applied the Software Development Life Cycle in my projects, from requirements gathering and analysis through design, implementation, testing, and deployment. I've created documentation, followed structured approaches, and ensured each phase is completed thoroughly before moving to the next.">SDLC</div>
-                        <div class="glass-card skill-tag" data-skill="UML" data-description="I've used UML diagrams to design and document software systems. My experience includes creating class diagrams, sequence diagrams, use case diagrams, and activity diagrams. UML has been essential for planning system architecture and communicating design decisions in team projects.">UML</div>
-                        <div class="glass-card skill-tag" data-skill="Design Patterns" data-description="I've implemented various design patterns in my applications, including Singleton, Factory, Observer, and MVC patterns. Understanding design patterns has helped me write more maintainable, scalable code and solve common software design problems efficiently.">Design Patterns</div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3 class="category-title">3D Rendering</h3>
-                    <div class="skills-grid">
-                        <div class="glass-card skill-tag" data-skill="Unreal Engine" data-description="I've developed a mini horror game using Unreal Engine, working with Blueprints for game logic, creating 3D environments, implementing lighting and shadows, and designing gameplay mechanics. My experience includes level design, asset integration, and optimizing game performance.">Unreal Engine</div>
-                        <div class="glass-card skill-tag" data-skill="Blender" data-description="I've used Blender for 3D modeling and animation. My experience includes creating 3D models, texturing, rigging, and animating characters and objects. I've designed various 3D animations and integrated Blender assets into game engines and other projects.">Blender</div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3 class="category-title">Personal Attributes</h3>
-                    <div class="skills-grid">
-                        <div class="glass-card skill-tag">Hardworking</div>
-                        <div class="glass-card skill-tag">Goal Oriented</div>
-                        <div class="glass-card skill-tag">Eager to Learn</div>
-                        <div class="glass-card skill-tag">Works Well Under Pressure</div>
-                        <div class="glass-card skill-tag">Collaborative</div>
-                        <div class="glass-card skill-tag">Fast Learner</div>
-                        <div class="glass-card skill-tag">Communication</div>
-                        <div class="glass-card skill-tag">Leadership</div>
-                        <div class="glass-card skill-tag">Creative</div>
-                        <div class="glass-card skill-tag">Critical Thinking</div>
-                        <div class="glass-card skill-tag">Risk Analysis</div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3 class="category-title">Language</h3>
-                    <div class="skills-grid">
-                        <div class="glass-card skill-tag" data-skill="English" data-description="English is my primary language for communication, documentation, and technical writing. I'm fluent in both written and spoken English, which has been essential for academic work, team collaboration, and creating technical documentation for my projects.">English</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skill Detail Modal -->
-        <div id="skillModal" class="skill-modal">
-            <div class="skill-modal-content">
-                <span class="skill-modal-close">&times;</span>
-                <h2 id="skillModalTitle"></h2>
-                <p id="skillModalDescription"></p>
-            </div>
-        </div>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">Projects</h2>
-                <div class="projects-grid">
-                    <div class="glass-card project-card">
-                        <div class="project-image-container">
-                            <img src="images/download (10).jpg" alt="Remember Me Project" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
-                            <h3>Remember Me</h3>
-                            <p>Time capsule app</p>
-                        </div>
-                    </div>
-                    <div class="glass-card project-card">
-                        <div class="project-image-container">
-                            <img src="images/download (11).jpg" alt="SpendSense Project" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-icon"><i class="fas fa-wallet"></i></div>
-                            <h3>SpendSense</h3>
-                            <p>A fully functional budgeting mobile app for Android</p>
-                        </div>
-                    </div>
-                    <div class="glass-card project-card">
-                        <div class="project-image-container">
-                            <img src="images/download (10).jpg" alt="Unreal Engine Horror Project" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-icon"><i class="fas fa-gamepad"></i></div>
-                            <h3>Unreal Engine Horror</h3>
-                            <p>Developed a mini horror game</p>
-                        </div>
-                    </div>
-                    <div class="glass-card project-card">
-                        <div class="project-image-container">
-                            <img src="images/download (10).jpg" alt="Animation Project" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-icon"><i class="fas fa-film"></i></div>
-                            <h3>Animation</h3>
-                            <p>Designed various 3D animations</p>
-                        </div>
-                    </div>
-                    <div class="glass-card project-card">
-                        <div class="project-image-container">
-                            <img src="images/download (11).jpg" alt="Mario Game Project" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-icon"><i class="fas fa-gamepad"></i></div>
-                            <h3>Mario Game</h3>
-                            <p>Built a fully functional Mario game in Python</p>
-                        </div>
-                    </div>
-                    <div class="glass-card project-card">
-                        <div class="project-image-container">
-                            <img src="images/download (10).jpg" alt="Eventia Project" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-icon"><i class="fas fa-plane"></i></div>
-                            <h3>Eventia</h3>
-                            <p>A fully functional Trip/Event planner app working with APIs</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Statistics Section -->
-        <section id="statistics" class="section statistics-section">
-            <div class="container">
-                <h2 class="section-title">By The Numbers</h2>
-                <div class="statistics-grid">
-                    <div class="glass-card stat-card">
-                        <div class="stat-icon"><i class="fas fa-code"></i></div>
-                        <div class="stat-number" data-target="27">0</div>
-                        <div class="stat-label">Technologies Mastered</div>
-                    </div>
-                    <div class="glass-card stat-card">
-                        <div class="stat-icon"><i class="fas fa-users"></i></div>
-                        <div class="stat-number" data-target="10">0</div>
-                        <div class="stat-label">Team Collaborations</div>
-                    </div>
-                    <div class="glass-card stat-card">
-                        <div class="stat-icon"><i class="fas fa-trophy"></i></div>
-                        <div class="stat-number" data-target="18">0</div>
-                        <div class="stat-label">Distinctions Achieved</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technologies Showcase Section -->
-        <section id="technologies" class="section">
-            <div class="container">
-                <h2 class="section-title">Technologies & Tools</h2>
-                <div class="technologies-showcase">
-                    <div class="glass-card tech-category-card">
-                        <div class="tech-category-header">
-                            <i class="fas fa-code"></i>
-                            <h3>Frontend Development</h3>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-item">React</span>
-                            <span class="tech-item">JavaScript</span>
-                            <span class="tech-item">HTML5</span>
-                            <span class="tech-item">CSS3</span>
-                            <span class="tech-item">Bootstrap</span>
-                        </div>
-                    </div>
-                    <div class="glass-card tech-category-card">
-                        <div class="tech-category-header">
-                            <i class="fas fa-server"></i>
-                            <h3>Backend & Cloud</h3>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-item">C#</span>
-                            <span class="tech-item">.NET</span>
-                            <span class="tech-item">Azure</span>
-                            <span class="tech-item">Firebase</span>
-                            <span class="tech-item">Node.js</span>
-                        </div>
-                    </div>
-                    <div class="glass-card tech-category-card">
-                        <div class="tech-category-header">
-                            <i class="fas fa-database"></i>
-                            <h3>Databases</h3>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-item">MySQL</span>
-                            <span class="tech-item">SQL Server</span>
-                            <span class="tech-item">MongoDB</span>
-                            <span class="tech-item">RoomDB</span>
-                        </div>
-                    </div>
-                    <div class="glass-card tech-category-card">
-                        <div class="tech-category-header">
-                            <i class="fas fa-mobile-alt"></i>
-                            <h3>Mobile Development</h3>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-item">Kotlin</span>
-                            <span class="tech-item">Android</span>
-                            <span class="tech-item">Java</span>
-                        </div>
-                    </div>
-                    <div class="glass-card tech-category-card">
-                        <div class="tech-category-header">
-                            <i class="fas fa-tools"></i>
-                            <h3>Development Tools</h3>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-item">Git & GitHub</span>
-                            <span class="tech-item">Visual Studio</span>
-                            <span class="tech-item">Android Studio</span>
-                            <span class="tech-item">Postman</span>
-                        </div>
-                    </div>
-                    <div class="glass-card tech-category-card">
-                        <div class="tech-category-header">
-                            <i class="fas fa-cube"></i>
-                            <h3>3D & Game Development</h3>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-item">Unreal Engine</span>
-                            <span class="tech-item">Blender</span>
-                            <span class="tech-item">Python</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-container-centered">
-                    <div class="glass-card contact-card">
-                        <div class="contact-content-wrapper">
-                            <div class="letter-image">
-                                <div class="animated-mail">
-                                    <div class="back-fold"></div>
-                                    <div class="letter">
-                                        <div class="letter-border"></div>
-                                        <div class="letter-title"></div>
-                                        <div class="letter-context"></div>
-                                        <div class="letter-stamp">
-                                            <div class="letter-stamp-inner"></div>
-                                        </div>
-                                    </div>
-                                    <div class="top-fold"></div>
-                                    <div class="body"></div>
-                                    <div class="left-fold"></div>
-                                </div>
-                                <div class="shadow"></div>
-                            </div>
-                            <div class="contact-info-section">
-                                <div class="contact-info-item">
-                                    <i class="fas fa-envelope"></i>
-                                    <div>
-                                        <h3>Email</h3>
-                                        <p><a href="mailto:sahil.ramesar27@gmail.com" class="contact-email-link">sahil.ramesar27@gmail.com</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Back to Top Button -->
-        <button id="backToTop" class="back-to-top" aria-label="Back to top">
-            <i class="fas fa-arrow-up"></i>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h3>Sahil Ramesar</h3>
-                        <p>Application Developer | Full-Stack & Cloud Computing</p>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Quick Links</h3>
-                        <ul class="footer-links">
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
+        <ul class="nav-menu">
+            <li><a href="#about"><i class="fas fa-user"></i> <span>About</span></a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> <span>Education</span></a></li>
+            <li><a href="#achievements"><i class="fas fa-trophy"></i> <span>Achievements</span></a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> <span>Skills</span></a></li>
+            <li><a href="#projects"><i class="fas fa-briefcase"></i> <span>Projects</span></a></li>
+            <li><a href="#technologies"><i class="fas fa-tools"></i> <span>Technologies</span></a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+        <div class="theme-toggle-container">
+            <label class="ui-switch">
+                <input type="checkbox" id="themeToggle">
+                <div class="slider">
+                    <div class="circle"></div>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2024 Sahil Ramesar. All rights reserved.</p>
+            </label>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="~/images/Black White Abstract Color and Style Video Background.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
+    </div>
+    <div class="hero-content">
+        <h1 class="hero-name">Sahil Ramesar</h1>
+        <p class="hero-title">Application Developer | Full-Stack & Cloud Computing | Interactive & Immersive Systems</p>
+        <div class="hero-contact">
+            <a href="mailto:sahil.ramesar27@gmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i> sahil.ramesar27@gmail.com
+            </a>
+            <a href="~/Documents/sahil ramesar cv (2).pdf" download="Sahil_Ramesar_CV.pdf" class="contact-link download-cv">
+                <i class="fas fa-download"></i> Download CV
+            </a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <div class="mouse"></div>
+    </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="glass-card about-card">
+            <div class="about-content-wrapper">
+                <div class="about-image-container">
+                    <img src="@Url.Content("~/images/sahil.jpg")" alt="Sahil Ramesar" class="about-image">
+                </div>
+                <div class="about-text-container">
+                    <p class="about-text">
+                        I'm a hardworking and passionate software developer with strong skills in programming, cloud technologies, databases, and UI/UX design. I have hands-on experience in building applications, analyzing systems, and developing creative, real-world solutions through modern frameworks and development practices. I'm a fast learner, team player, and always eager to grow in the tech industry.
+                    </p>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
+</section>
 
-    <script src="js/portfolio.js"></script>
-</body>
-</html>
+<!-- Education Section -->
+<section id="education" class="section">
+    <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="education-grid">
+            <div class="glass-card education-card">
+                <div class="education-header">
+                    <h3>Bachelor of Computer and Information Sciences</h3>
+                    <span class="education-type">Application Development</span>
+                </div>
+                <p class="education-institution">Varsity College</p>
+                <p class="education-period">2023 - 2025</p>
+            </div>
+            <div class="glass-card education-card">
+                <div class="education-header">
+                    <h3>Matric</h3>
+                    <span class="education-type">Bachelors Degree</span>
+                </div>
+                <p class="education-institution">Curro Midrand Sagewood</p>
+                <p class="education-period">2019 - 2022</p>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- Achievements Section -->
+<section id="achievements" class="section">
+    <div class="container">
+        <h2 class="section-title">Achievements & Highlights</h2>
+        <div class="achievements-grid">
+            <div class="glass-card achievement-item">
+                <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                <p>Gained consistent and several distinctions in my modules</p>
+            </div>
+            <div class="glass-card achievement-item">
+                <div class="achievement-icon"><i class="fas fa-briefcase"></i></div>
+                <p>Built multiple full-stack applications integrating frontend, backend, and databases</p>
+            </div>
+            <div class="glass-card achievement-item">
+                <div class="achievement-icon"><i class="fas fa-file-alt"></i></div>
+                <p>Created research proposals and academic reports on ICT topics</p>
+            </div>
+            <div class="glass-card achievement-item">
+                <div class="achievement-icon"><i class="fas fa-users"></i></div>
+                <p>Participated in group software development projects using Agile practices</p>
+            </div>
+            <div class="glass-card achievement-item">
+                <div class="achievement-icon"><i class="fas fa-globe"></i></div>
+                <p>Worked to develop fully functional web applications for companies as well as mobile apps</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section">
+    <div class="container">
+        <h2 class="section-title">Skills & Expertise</h2>
+        
+        <div class="skills-category">
+            <h3 class="category-title">Programming</h3>
+            <div class="skills-grid">
+                <div class="glass-card skill-tag" data-skill="Java" data-description="I've used Java extensively in my academic projects, particularly for building object-oriented applications. I've developed desktop applications using Java Swing and worked with Java frameworks for backend development. My experience includes creating robust, scalable solutions following best practices and design patterns.">Java</div>
+                <div class="glass-card skill-tag" data-skill="HTML" data-description="HTML is fundamental to all my web development projects. I've used it to structure content for various web applications, ensuring semantic markup and accessibility. I've built responsive layouts that work across different devices and browsers, integrating HTML with CSS and JavaScript for dynamic user experiences.">HTML</div>
+                <div class="glass-card skill-tag" data-skill="C#" data-description="I've utilized C# for developing Windows applications and backend services. My experience includes working with .NET framework to create desktop applications and web services. I've implemented object-oriented principles, worked with LINQ, and integrated C# applications with databases for data management.">C#</div>
+                <div class="glass-card skill-tag" data-skill="JavaScript" data-description="JavaScript is central to my frontend development work. I've used it to create interactive web applications, handle API calls, and implement dynamic content updates. My projects include form validation, DOM manipulation, event handling, and building single-page applications with modern JavaScript features.">JavaScript</div>
+                <div class="glass-card skill-tag" data-skill="React" data-description="I've built modern, responsive web applications using React. My experience includes creating reusable components, managing state with hooks, implementing routing, and integrating with REST APIs. I've developed user interfaces that are both functional and visually appealing, following React best practices.">React</div>
+                <div class="glass-card skill-tag" data-skill="Kotlin" data-description="I've used Kotlin for Android mobile app development. My experience includes building native Android applications with Kotlin, utilizing Android SDK features, implementing MVVM architecture, and creating user-friendly mobile interfaces. I've worked on apps that handle data persistence and API integration.">Kotlin</div>
+                <div class="glass-card skill-tag" data-skill="CSS" data-description="CSS is essential to my frontend development toolkit. I've created responsive designs using Flexbox and Grid, implemented animations and transitions, and built modern UIs with glassmorphism effects. I've worked with CSS preprocessors and maintained consistent styling across large projects.">CSS</div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3 class="category-title">Cloud Technologies</h3>
+            <div class="skills-grid">
+                <div class="glass-card skill-tag" data-skill="Firebase" data-description="I've integrated Firebase into multiple mobile and web applications for authentication, real-time database, and cloud storage. I've used Firebase Authentication for user management, Firestore for data storage, and Firebase Cloud Functions for serverless backend operations. This has enabled me to build scalable applications quickly.">Firebase</div>
+                <div class="glass-card skill-tag" data-skill="Azure" data-description="I've worked with Microsoft Azure for cloud services deployment and management. My experience includes deploying web applications to Azure App Service, configuring Azure SQL databases, and utilizing Azure's cloud storage solutions. I've also worked with Azure DevOps for CI/CD pipelines.">Azure</div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3 class="category-title">Databases</h3>
+            <div class="skills-grid">
+                <div class="glass-card skill-tag" data-skill="MySQL" data-description="I've used MySQL extensively for relational database management in web applications. I've designed database schemas, written complex SQL queries, implemented joins, and optimized database performance. My projects include e-commerce systems and content management applications with proper normalization and indexing.">MySQL</div>
+                <div class="glass-card skill-tag" data-skill="SQL Server" data-description="I've worked with SQL Server for enterprise-level database solutions. My experience includes creating stored procedures, triggers, and views. I've integrated SQL Server with .NET applications and managed database security, backups, and performance tuning for production environments.">SQL Server</div>
+                <div class="glass-card skill-tag" data-skill="MongoDB" data-description="I've utilized MongoDB for NoSQL database solutions in projects requiring flexible data structures. I've worked with MongoDB collections, implemented aggregation pipelines, and integrated it with Node.js applications. My experience includes schema design for document-based storage and query optimization.">MongoDB</div>
+                <div class="glass-card skill-tag" data-skill="MySQL Workbench" data-description="I've used MySQL Workbench for database design, modeling, and administration. I've created ER diagrams, designed database schemas visually, and managed database connections. This tool has been essential for planning and documenting database structures before implementation.">MySQL Workbench</div>
+                <div class="glass-card skill-tag" data-skill="RoomDB" data-description="I've implemented RoomDB in Android applications for local data persistence. I've created entities, DAOs (Data Access Objects), and database classes following Room architecture. My experience includes implementing offline-first features, data migrations, and efficient local data storage for mobile apps.">RoomDB</div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3 class="category-title">Tools</h3>
+            <div class="skills-grid">
+                <div class="glass-card skill-tag" data-skill="GitHub & Git" data-description="Git and GitHub are essential to my development workflow. I use Git for version control on all projects, managing branches, commits, and merges. I've collaborated on team projects using GitHub, created pull requests, resolved merge conflicts, and maintained clean commit histories following best practices.">GitHub & Git</div>
+                <div class="glass-card skill-tag" data-skill="Postman" data-description="I use Postman extensively for API testing and development. I've created collections of API requests, tested REST endpoints, debugged API responses, and documented APIs. Postman has been crucial for integrating frontend applications with backend services and ensuring API reliability.">Postman</div>
+                <div class="glass-card skill-tag" data-skill="Visual Studio/Code" data-description="Visual Studio Code is my primary code editor for web development. I've customized it with extensions for productivity, used integrated terminal for command-line operations, and leveraged its debugging capabilities. I've also used Visual Studio for .NET development with C#.">Visual Studio/Code</div>
+                <div class="glass-card skill-tag" data-skill="Android Studio" data-description="I've used Android Studio for developing native Android applications. My experience includes using the layout editor, debugging with the built-in debugger, managing Gradle dependencies, and testing apps on emulators and physical devices. I've also utilized Android Studio's profiling tools for performance optimization.">Android Studio</div>
+                <div class="glass-card skill-tag" data-skill="NetBeans" data-description="I've used NetBeans for Java development, particularly for desktop applications. I've utilized its GUI builder, integrated debugging tools, and managed Java projects with Maven. NetBeans has been helpful for rapid prototyping and building Java Swing applications.">NetBeans</div>
+                <div class="glass-card skill-tag" data-skill="PyCharm" data-description="I've used PyCharm for Python development, including game development projects. I've leveraged its intelligent code completion, debugging features, and integrated terminal. PyCharm has been essential for managing Python projects, handling virtual environments, and developing applications like my Mario game.">PyCharm</div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3 class="category-title">Software Engineering</h3>
+            <div class="skills-grid">
+                <div class="glass-card skill-tag" data-skill="Agile" data-description="I've participated in Agile development methodologies in group projects, including sprint planning, daily standups, and sprint reviews. I've worked with Scrum frameworks, managed user stories, and adapted to changing requirements. Agile practices have helped me deliver iterative, high-quality software solutions.">Agile</div>
+                <div class="glass-card skill-tag" data-skill="SDLC" data-description="I understand and have applied the Software Development Life Cycle in my projects, from requirements gathering and analysis through design, implementation, testing, and deployment. I've created documentation, followed structured approaches, and ensured each phase is completed thoroughly before moving to the next.">SDLC</div>
+                <div class="glass-card skill-tag" data-skill="UML" data-description="I've used UML diagrams to design and document software systems. My experience includes creating class diagrams, sequence diagrams, use case diagrams, and activity diagrams. UML has been essential for planning system architecture and communicating design decisions in team projects.">UML</div>
+                <div class="glass-card skill-tag" data-skill="Design Patterns" data-description="I've implemented various design patterns in my applications, including Singleton, Factory, Observer, and MVC patterns. Understanding design patterns has helped me write more maintainable, scalable code and solve common software design problems efficiently.">Design Patterns</div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3 class="category-title">3D Rendering</h3>
+            <div class="skills-grid">
+                <div class="glass-card skill-tag" data-skill="Unreal Engine" data-description="I've developed a mini horror game using Unreal Engine, working with Blueprints for game logic, creating 3D environments, implementing lighting and shadows, and designing gameplay mechanics. My experience includes level design, asset integration, and optimizing game performance.">Unreal Engine</div>
+                <div class="glass-card skill-tag" data-skill="Blender" data-description="I've used Blender for 3D modeling and animation. My experience includes creating 3D models, texturing, rigging, and animating characters and objects. I've designed various 3D animations and integrated Blender assets into game engines and other projects.">Blender</div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3 class="category-title">Personal Attributes</h3>
+            <div class="skills-grid">
+                <div class="glass-card skill-tag">Hardworking</div>
+                <div class="glass-card skill-tag">Goal Oriented</div>
+                <div class="glass-card skill-tag">Eager to Learn</div>
+                <div class="glass-card skill-tag">Works Well Under Pressure</div>
+                <div class="glass-card skill-tag">Collaborative</div>
+                <div class="glass-card skill-tag">Fast Learner</div>
+                <div class="glass-card skill-tag">Communication</div>
+                <div class="glass-card skill-tag">Leadership</div>
+                <div class="glass-card skill-tag">Creative</div>
+                <div class="glass-card skill-tag">Critical Thinking</div>
+                <div class="glass-card skill-tag">Risk Analysis</div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3 class="category-title">Language</h3>
+            <div class="skills-grid">
+                <div class="glass-card skill-tag" data-skill="English" data-description="English is my primary language for communication, documentation, and technical writing. I'm fluent in both written and spoken English, which has been essential for academic work, team collaboration, and creating technical documentation for my projects.">English</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skill Detail Modal -->
+<div id="skillModal" class="skill-modal">
+    <div class="skill-modal-content">
+        <span class="skill-modal-close">&times;</span>
+        <h2 id="skillModalTitle"></h2>
+        <p id="skillModalDescription"></p>
+    </div>
+</div>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="glass-card project-card">
+                <div class="project-image-container">
+                    <img src="@Url.Content("~/images/download (10).jpg")" alt="Remember Me Project" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Remember Me</h3>
+                    <p>Time capsule app</p>
+                </div>
+            </div>
+            <div class="glass-card project-card">
+                <div class="project-image-container">
+                    <img src="@Url.Content("~/images/download (11).jpg")" alt="SpendSense Project" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-wallet"></i></div>
+                    <h3>SpendSense</h3>
+                    <p>A fully functional budgeting mobile app for Android</p>
+                </div>
+            </div>
+            <div class="glass-card project-card">
+                <div class="project-image-container">
+                    <img src="@Url.Content("~/images/Thought — Why Is Computer Science a Good Topic to Study_.jpg")" alt="Unreal Engine Horror Project" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Unreal Engine Horror</h3>
+                    <p>Developed a mini horror game</p>
+                </div>
+            </div>
+            <div class="glass-card project-card">
+                <div class="project-image-container">
+                    <img src="@Url.Content("~/images/download (10).jpg")" alt="Animation Project" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-film"></i></div>
+                    <h3>Animation</h3>
+                    <p>Designed various 3D animations</p>
+                </div>
+            </div>
+            <div class="glass-card project-card">
+                <div class="project-image-container">
+                    <img src="@Url.Content("~/images/download (11).jpg")" alt="Mario Game Project" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Mario Game</h3>
+                    <p>Built a fully functional Mario game in Python</p>
+                </div>
+            </div>
+            <div class="glass-card project-card">
+                <div class="project-image-container">
+                    <img src="@Url.Content("~/images/download (10).jpg")" alt="Eventia Project" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-plane"></i></div>
+                    <h3>Eventia</h3>
+                    <p>A fully functional Trip/Event planner app working with APIs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section id="statistics" class="section statistics-section">
+    <div class="container">
+        <h2 class="section-title">By The Numbers</h2>
+        <div class="statistics-grid">
+            <div class="glass-card stat-card">
+                <div class="stat-icon"><i class="fas fa-code"></i></div>
+                <div class="stat-number" data-target="27">0</div>
+                <div class="stat-label">Technologies Mastered</div>
+            </div>
+            <div class="glass-card stat-card">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-number" data-target="10">0</div>
+                <div class="stat-label">Team Collaborations</div>
+            </div>
+            <div class="glass-card stat-card">
+                <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                <div class="stat-number" data-target="18">0</div>
+                <div class="stat-label">Distinctions Achieved</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies Showcase Section -->
+<section id="technologies" class="section">
+    <div class="container">
+        <h2 class="section-title">Technologies & Tools</h2>
+        <div class="technologies-showcase">
+            <div class="glass-card tech-category-card">
+                <div class="tech-category-header">
+                    <i class="fas fa-code"></i>
+                    <h3>Frontend Development</h3>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-item">React</span>
+                    <span class="tech-item">JavaScript</span>
+                    <span class="tech-item">HTML5</span>
+                    <span class="tech-item">CSS3</span>
+                    <span class="tech-item">Bootstrap</span>
+                </div>
+            </div>
+            <div class="glass-card tech-category-card">
+                <div class="tech-category-header">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend & Cloud</h3>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-item">C#</span>
+                    <span class="tech-item">.NET</span>
+                    <span class="tech-item">Azure</span>
+                    <span class="tech-item">Firebase</span>
+                    <span class="tech-item">Node.js</span>
+                </div>
+            </div>
+            <div class="glass-card tech-category-card">
+                <div class="tech-category-header">
+                    <i class="fas fa-database"></i>
+                    <h3>Databases</h3>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-item">MySQL</span>
+                    <span class="tech-item">SQL Server</span>
+                    <span class="tech-item">MongoDB</span>
+                    <span class="tech-item">RoomDB</span>
+                </div>
+            </div>
+            <div class="glass-card tech-category-card">
+                <div class="tech-category-header">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Development</h3>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-item">Kotlin</span>
+                    <span class="tech-item">Android</span>
+                    <span class="tech-item">Java</span>
+                </div>
+            </div>
+            <div class="glass-card tech-category-card">
+                <div class="tech-category-header">
+                    <i class="fas fa-tools"></i>
+                    <h3>Development Tools</h3>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-item">Git & GitHub</span>
+                    <span class="tech-item">Visual Studio</span>
+                    <span class="tech-item">Android Studio</span>
+                    <span class="tech-item">Postman</span>
+                </div>
+            </div>
+            <div class="glass-card tech-category-card">
+                <div class="tech-category-header">
+                    <i class="fas fa-cube"></i>
+                    <h3>3D & Game Development</h3>
+                </div>
+                <div class="tech-stack">
+                    <span class="tech-item">Unreal Engine</span>
+                    <span class="tech-item">Blender</span>
+                    <span class="tech-item">Python</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container-centered">
+            <div class="glass-card contact-card">
+                <div class="contact-content-wrapper">
+                    <div class="contact-info-section">
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>sahil.ramesar27@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="letter-image">
+                        <div class="animated-mail">
+                            <div class="back-fold"></div>
+                            <div class="letter">
+                                <div class="letter-border"></div>
+                                <div class="letter-title"></div>
+                                <div class="letter-context"></div>
+                                <div class="letter-stamp">
+                                    <div class="letter-stamp-inner"></div>
+                                </div>
+                            </div>
+                            <div class="top-fold"></div>
+                            <div class="body"></div>
+                            <div class="left-fold"></div>
+                        </div>
+                        <div class="shadow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sahil Ramesar</h3>
+                <p>Application Developer | Full-Stack & Cloud Computing</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sahil Ramesar. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
