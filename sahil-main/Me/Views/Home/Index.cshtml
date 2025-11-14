@@ -1,18 +1,23 @@
-﻿@{
+@{
     ViewData["Title"] = "Sahil Ramesar - Portfolio";
 }
 
 <!-- Navigation -->
 <nav class="navbar">
     <div class="nav-container">
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="nav-menu">
-            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            <li><a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
-            <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-            <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
-            <li><a href="#technologies"><i class="fas fa-tools"></i> Technologies</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> <span>About</span></a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> <span>Education</span></a></li>
+            <li><a href="#achievements"><i class="fas fa-trophy"></i> <span>Achievements</span></a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> <span>Skills</span></a></li>
+            <li><a href="#projects"><i class="fas fa-briefcase"></i> <span>Projects</span></a></li>
+            <li><a href="#technologies"><i class="fas fa-tools"></i> <span>Technologies</span></a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
         </ul>
         <div class="theme-toggle-container">
             <label class="ui-switch">
@@ -37,6 +42,9 @@
         <h1 class="hero-name">Sahil Ramesar</h1>
         <p class="hero-title">Application Developer | Full-Stack & Cloud Computing | Interactive & Immersive Systems</p>
         <div class="hero-contact">
+            <a href="mailto:sahil.ramesar27@gmail.com" class="contact-link">
+                <i class="fas fa-envelope"></i> sahil.ramesar27@gmail.com
+            </a>
             <a href="~/Documents/sahil ramesar cv (2).pdf" download="Sahil_Ramesar_CV.pdf" class="contact-link download-cv">
                 <i class="fas fa-download"></i> Download CV
             </a>
@@ -54,11 +62,11 @@
         <div class="glass-card about-card">
             <div class="about-content-wrapper">
                 <div class="about-image-container">
-                    <img src="@Url.Content("~/images/saii.jpg")" alt="Sahil Ramesar" class="about-image">
+                    <img src="@Url.Content("~/images/sahil.jpg")" alt="Sahil Ramesar" class="about-image">
                 </div>
                 <div class="about-text-container">
                     <p class="about-text">
-                        I’m a results-driven software developer with a strong foundation in programming, cloud technologies, databases, and UI/UX design. I bring hands-on experience in building scalable applications, analyzing complex systems, and delivering creative, practical solutions through modern development frameworks. I thrive in collaborative environments, adapt quickly to new challenges, and continuously seek to refine my technical and problem-solving skills.I'm a fast learner, team player, and always eager to grow in the tech industry.
+                        I'm a hardworking and passionate software developer with strong skills in programming, cloud technologies, databases, and UI/UX design. I have hands-on experience in building applications, analyzing systems, and developing creative, real-world solutions through modern frameworks and development practices. I'm a fast learner, team player, and always eager to grow in the tech industry.
                     </p>
                 </div>
             </div>
@@ -124,7 +132,7 @@
 <section id="skills" class="section">
     <div class="container">
         <h2 class="section-title">Skills & Expertise</h2>
-
+        
         <div class="skills-category">
             <h3 class="category-title">Programming</h3>
             <div class="skills-grid">
@@ -249,7 +257,7 @@
             </div>
             <div class="glass-card project-card">
                 <div class="project-image-container">
-                    <img src="@Url.Content("~/images/download (10).jpg")" alt="Unreal Engine Horror Project" class="project-image">
+                    <img src="@Url.Content("~/images/Thought — Why Is Computer Science a Good Topic to Study_.jpg")" alt="Unreal Engine Horror Project" class="project-image">
                 </div>
                 <div class="project-content">
                     <div class="project-icon"><i class="fas fa-gamepad"></i></div>
@@ -403,6 +411,15 @@
         <div class="contact-container-centered">
             <div class="glass-card contact-card">
                 <div class="contact-content-wrapper">
+                    <div class="contact-info-section">
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>sahil.ramesar27@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="letter-image">
                         <div class="animated-mail">
                             <div class="back-fold"></div>
@@ -419,15 +436,6 @@
                             <div class="left-fold"></div>
                         </div>
                         <div class="shadow"></div>
-                    </div>
-                    <div class="contact-info-section">
-                        <div class="contact-info-item">
-                           
-                            <div>
-                                <h3>Email</h3>
-                                <p><a href="mailto:sahil.ramesar27@gmail.com" class="contact-email-link">sahil.ramesar27@gmail.com</a></p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
