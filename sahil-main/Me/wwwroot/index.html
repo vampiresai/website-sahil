@@ -1,7 +1,63 @@
-@{
-    ViewData["Title"] = "Sahil Ramesar - Portfolio";
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sahil Ramesar - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <!-- Waves -->
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+        
+        <!-- Orbs -->
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+        
+        <!-- Particles -->
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
 
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="pyramid-loader">
+            <div class="wrapper">
+                <span class="side side1"></span>
+                <span class="side side2"></span>
+                <span class="side side3"></span>
+                <span class="side side4"></span>
+                <span class="shadow"></span>
+            </div>  
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content">
 <!-- Navigation -->
 <nav class="navbar">
     <div class="nav-container">
@@ -34,7 +90,7 @@
 <section id="hero" class="hero">
     <div class="hero-video-container">
         <video class="hero-video" autoplay muted loop playsinline>
-            <source src="~/images/Black White Abstract Color and Style Video Background.mp4" type="video/mp4">
+            <source src="images/Black White Abstract Color and Style Video Background.mp4" type="video/mp4">
         </video>
         <div class="hero-video-overlay"></div>
     </div>
@@ -42,10 +98,7 @@
         <h1 class="hero-name">Sahil Ramesar</h1>
         <p class="hero-title">Application Developer | Full-Stack & Cloud Computing | Interactive & Immersive Systems</p>
         <div class="hero-contact">
-            <a href="mailto:sahil.ramesar27@gmail.com" class="contact-link">
-                <i class="fas fa-envelope"></i> sahil.ramesar27@gmail.com
-            </a>
-            <a href="~/Documents/sahil ramesar cv (2).pdf" download="Sahil_Ramesar_CV.pdf" class="contact-link download-cv">
+            <a href="Documents/sahil ramesar cv (2).pdf" download="Sahil_Ramesar_CV.pdf" class="contact-link download-cv">
                 <i class="fas fa-download"></i> Download CV
             </a>
         </div>
@@ -62,7 +115,7 @@
         <div class="glass-card about-card">
             <div class="about-content-wrapper">
                 <div class="about-image-container">
-                    <img src="@Url.Content("~/images/sahil.jpg")" alt="Sahil Ramesar" class="about-image">
+                    <img src="images/saii.jpg" alt="Sahil Ramesar" class="about-image">
                 </div>
                 <div class="about-text-container">
                     <p class="about-text">
@@ -237,7 +290,27 @@
         <div class="projects-grid">
             <div class="glass-card project-card">
                 <div class="project-image-container">
-                    <img src="@Url.Content("~/images/download (10).jpg")" alt="Remember Me Project" class="project-image">
+                    <img src="images/download (10).jpg" alt="Chess Game Project" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-chess"></i></div>
+                    <h3>Chess Game</h3>
+                    <p>A fully functional chess game with complete game logic and move validation</p>
+                </div>
+            </div>
+            <div class="glass-card project-card">
+                <div class="project-image-container">
+                    <img src="images/download (10).jpg" alt="Weather App Project" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
+                    <h3>Weather App</h3>
+                    <p>A weather application integrated with weather APIs for real-time forecasts</p>
+                </div>
+            </div>
+            <div class="glass-card project-card">
+                <div class="project-image-container">
+                    <img src="images/download (10).jpg" alt="Remember Me Project" class="project-image">
                 </div>
                 <div class="project-content">
                     <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
@@ -247,27 +320,7 @@
             </div>
             <div class="glass-card project-card">
                 <div class="project-image-container">
-                    <img src="@Url.Content("~/images/download (11).jpg")" alt="SpendSense Project" class="project-image">
-                </div>
-                <div class="project-content">
-                    <div class="project-icon"><i class="fas fa-wallet"></i></div>
-                    <h3>SpendSense</h3>
-                    <p>A fully functional budgeting mobile app for Android</p>
-                </div>
-            </div>
-            <div class="glass-card project-card">
-                <div class="project-image-container">
-                    <img src="@Url.Content("~/images/Thought — Why Is Computer Science a Good Topic to Study_.jpg")" alt="Unreal Engine Horror Project" class="project-image">
-                </div>
-                <div class="project-content">
-                    <div class="project-icon"><i class="fas fa-gamepad"></i></div>
-                    <h3>Unreal Engine Horror</h3>
-                    <p>Developed a mini horror game</p>
-                </div>
-            </div>
-            <div class="glass-card project-card">
-                <div class="project-image-container">
-                    <img src="@Url.Content("~/images/download (10).jpg")" alt="Animation Project" class="project-image">
+                    <img src="images/download (10).jpg" alt="Animation Project" class="project-image">
                 </div>
                 <div class="project-content">
                     <div class="project-icon"><i class="fas fa-film"></i></div>
@@ -277,7 +330,27 @@
             </div>
             <div class="glass-card project-card">
                 <div class="project-image-container">
-                    <img src="@Url.Content("~/images/download (11).jpg")" alt="Mario Game Project" class="project-image">
+                    <img src="images/download (11).jpg" alt="SpendSense Project" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-wallet"></i></div>
+                    <h3>SpendSense</h3>
+                    <p>A fully functional budgeting mobile app for Android</p>
+                </div>
+            </div>
+            <div class="glass-card project-card">
+                <div class="project-image-container">
+                    <img src="images/download (11).jpg" alt="Unreal Engine Horror Project" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Unreal Engine Horror</h3>
+                    <p>Developed a mini horror game</p>
+                </div>
+            </div>
+            <div class="glass-card project-card">
+                <div class="project-image-container">
+                    <img src="images/download (11).jpg" alt="Mario Game Project" class="project-image">
                 </div>
                 <div class="project-content">
                     <div class="project-icon"><i class="fas fa-gamepad"></i></div>
@@ -287,7 +360,7 @@
             </div>
             <div class="glass-card project-card">
                 <div class="project-image-container">
-                    <img src="@Url.Content("~/images/download (10).jpg")" alt="Eventia Project" class="project-image">
+                    <img src="images/download (10).jpg" alt="Eventia Project" class="project-image">
                 </div>
                 <div class="project-content">
                     <div class="project-icon"><i class="fas fa-plane"></i></div>
@@ -467,7 +540,12 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Sahil Ramesar. All rights reserved.</p>
+            <p>&copy; 2025 Sahil Ramesar. All rights reserved.</p>
         </div>
     </div>
 </footer>
+    </div>
+
+    <script src="js/portfolio.js"></script>
+</body>
+</html>
